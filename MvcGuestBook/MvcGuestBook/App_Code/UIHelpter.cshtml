@@ -1,0 +1,19 @@
+﻿@helper ShowUnitPrice(int price)
+{
+    if (price == 0)
+    {
+        @:免费
+    } else
+    {
+            @price
+    }
+ }
+
+
+@functions {
+    public static IHtmlString GetYesterday()
+    {
+        var theDay = DateTime.Now.AddDays(-1);
+        return new HtmlString(theDay.ToShortDateString());
+    }
+}

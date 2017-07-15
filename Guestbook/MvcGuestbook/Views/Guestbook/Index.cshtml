@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MvcGuestbook.Models.Guestbook>
+
+@{
+    ViewBag.Title = "留下足迹";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("留下足迹", "Write")
+</p>
+<ul>
+@foreach (var item in Model)
+{
+    <li>
+        <strong>姓名</strong>:@Html.DisplayFor(modelItem => item.姓名)
+        <br />
+        <strong>Email</strong>:@Html.DisplayFor(modelItem => item.Email)
+        <br />
+        <strong>留言内容</strong>:<br />
+        @Html.DisplayFor(modelItem => item.内容)
+    </li>
+
+}
+</ul>

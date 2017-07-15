@@ -1,0 +1,23 @@
+﻿
+
+
+@{
+    ViewBag.Title = "testForm";
+}
+
+<form method="post">
+    <p>
+        使用者名称：
+        <input type="text" name="userName" />
+    </p>
+    <p>
+        你输入的使用者名称为：@Model
+    </p>
+    <p>
+        @UIHelpter.GetYesterday()
+    </p>
+
+    <input type="submit" />
+</form>
+
+@Html.Partial("OnlineUserCountPartial")
